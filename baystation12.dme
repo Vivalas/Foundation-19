@@ -2251,6 +2251,7 @@
 #include "code\modules\mob\living\silicon\ai\logout.dm"
 #include "code\modules\mob\living\silicon\ai\malf.dm"
 #include "code\modules\mob\living\silicon\ai\power.dm"
+#include "code\modules\mob\living\silicon\ai\vox_sounds.dm"
 #include "code\modules\mob\living\silicon\pai\admin.dm"
 #include "code\modules\mob\living\silicon\pai\death.dm"
 #include "code\modules\mob\living\silicon\pai\examine.dm"

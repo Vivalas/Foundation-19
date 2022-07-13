@@ -1297,6 +1297,11 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	C.color = flash_color
 	animate(C, color = animate_color, time = flash_time)
 
+/proc/clean_input(Message, Title, Default, mob/user=usr)
+	var/txt = input(user, Message, Title, html_decode(Default)) as text | null
+	if(txt)
+		return html_encode(txt)
+
 // Misc. ported from TG
 
 #define UNTIL(X) while(!(X)) stoplag()
