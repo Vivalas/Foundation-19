@@ -25,6 +25,6 @@ jobs:
       - name: Make CL
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_EMAIL: "56381746+ss13-foundation19bot@users.noreply.github.com"
-          GIT_NAME: "ss13-foundation19bot"
+          GIT_EMAIL: "mustang29-foundation19@yahoo.com"
+          GIT_NAME: "Foundation19Bot"
         run: python tools/changelog/generate_cl.py
