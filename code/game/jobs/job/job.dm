@@ -513,7 +513,7 @@
 	if(department_count < 5) //LCZ can always have at least 5 guards, regardless of Class D population
 		return TRUE
 
-	if(department_count < CD.get_active_count() / 4) //if there is more than 4 d-class for every guard
+	if(department_count < CD.get_active_count() / 3) //if there is more than 3 d-class for every guard
 		return TRUE
 	else
 		return FALSE
