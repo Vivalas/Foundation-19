@@ -101,6 +101,12 @@
 		if(dsdiff > 0)
 			to_chat(player, SPAN_WARNING("You must wait [time2text(dsdiff, "mm:ss")] before rejoining."))
 			return
+
+		var/esdiff = world.time - usr.client.death_time
+		if(esdiff < (15 MINUTES + (usr.client.escalation_respawns - 1) * GLOB.escalation_timer))
+			to_chat(player, SPAN_WARNING("You are currently on cooldown for conbat-intensive roles. You must wait [time2text(dsdiff, "mm:ss")] before rejoining. Note you can still join as a role other than security or Class-D."))
+
+
 	player.LateChoices() //show the latejoin job selection menu
 
 /obj/screen/new_player/selection/settings

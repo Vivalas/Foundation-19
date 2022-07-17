@@ -88,6 +88,9 @@
 	var/list/dsay_log = list()
 	var/list/interact_log = list()
 
+//Escalating Respawn Stuff:
+	var/escalation_respawns = 0
+	var/death_time = 0
 
 
 // List of all asset filenames sent to this client by the asset cache, along with their assoicated md5s

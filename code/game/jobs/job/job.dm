@@ -58,6 +58,8 @@
 	var/required_language
 
 	var/balance_limited = FALSE //is this job limited for balance purposes, compared to D-class? Intended for LCZ balance
+	var/respawn_escalation = FALSE //is this job part of the escalating respawn timer system?
+
 
 
 /datum/job/New()
@@ -194,6 +196,10 @@
 
 /datum/job/proc/is_position_available()
 	if(!check_d_class_balance())
+		return FALSE
+
+	var/esdiff = world.time - usr.client.death_time
+	if((esdiff < (15 MINUTES + (usr.client.escalation_respawns - 1) * GLOB.escalation_timer)) && respawn_escalation)
 		return FALSE
 	else
 		return (current_positions < total_positions) || (total_positions == -1)

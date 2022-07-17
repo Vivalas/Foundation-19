@@ -13,3 +13,6 @@ GLOBAL_LIST_INIT(restricted_camera_networks, list(\
 	NETWORK_CRESCENT,\
 	"Secret"\
 ))
+
+GLOBAL_VAR_INIT(autobalance_ratio, 3)
+GLOBAL_VAR_INIT(escalation_timer, 10 MINUTES)

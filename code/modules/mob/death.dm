@@ -83,6 +83,11 @@
 			log_debug("[src] ([src.type]) died but does not have a valid health7 icon_state (using health6 instead). report this error to Ccomp5950 or your nearest Developer")
 
 	timeofdeath = world.time
+	client.death_time = world.time
+
+	if(mind.assigned_job.respawn_escalation)
+		client.escalation_respawns++
+
 	if(mind)
 		mind.StoreMemory("Time of death: [station_time_timestamp("hh:mm")]", /decl/memory_options/system)
 	switch_from_living_to_dead_mob_list()
